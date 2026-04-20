@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(bg.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.watch-container {
+    position: relative;
+    width: 470px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {
+    position: absolute;
+    width: 51%;
+    height: 56%;
+    background-color: #000;
+    border-radius: 20%;
+    z-index: 2;
+    border: 1px solid black;
+}
+
+.bezel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.screenframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    border: none;     
+    overflow: hidden;  
+    display: block;    
+}
