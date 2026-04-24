@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HertzUI</title>
+<title>HertzUI | Glassmorphism CSS Generator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+ <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
           <div class="liquidGlass-effect"></div>
           <div class="liquidGlass-tint"></div>
           <div class="liquidGlass-shine"></div>
-          <div class="liquidGlass-content">HertzUI</div>
+          <div class="liquidGlass-content">Button</div>
         </button>
       </div>
 
@@ -37,7 +37,7 @@
           <div class="liquidGlass-tint"></div>
           <div class="liquidGlass-shine"></div>
           <div class="liquidGlass-content" style="width:100%">
-            <input type="text" placeholder="Enter Here...">
+            <input type="text" placeholder="Enter here...">
           </div>
         </div>
       </div>
@@ -52,73 +52,42 @@
         <button class="tab" data-tab="input">Input</button>
       </div>
 
-      <div class="control-row">
-        <label>Blur</label>
-        <input type="range" id="ctrl-blur" min="0" max="40" step="1" value="15" oninput="update()">
-        <span class="val" id="val-blur">15px</span>
-      </div>
-
-      <div class="control-row">
-        <label>Opacity</label>
-        <input type="range" id="ctrl-opacity" min="0" max="1" step="0.01" value="0.15" oninput="update()">
-        <span class="val" id="val-opacity">15%</span>
-      </div>
-
-      <div class="control-row">
-        <label>Distort</label>
-        <input type="range" id="ctrl-distort" min="0" max="300" step="1" value="140" oninput="update()">
-        <span class="val" id="val-distort">140</span>
-      </div>
-
-      <div class="control-row">
-        <label>Noise</label>
-        <input type="range" id="ctrl-turb" min="0.001" max="0.05" step="0.001" value="0.015" oninput="update()">
-        <span class="val" id="val-turb">0.015</span>
-      </div>
-
-      <div class="control-row">
-        <label>Radius</label>
-        <input type="range" id="ctrl-radius" min="0" max="100" step="1" value="32" oninput="update()">
-        <span class="val" id="val-radius">32px</span>
-      </div>
-
-      <div class="control-row">
-        <label>Shine</label>
-        <input type="range" id="ctrl-shine" min="0" max="1" step="0.01" value="0.5" oninput="update()">
-        <span class="val" id="val-shine">50%</span>
-      </div>
-
-      <div class="color-row">
-        <label>Tint</label>
-        <input type="color" id="ctrl-color" value="#ffffff" oninput="update()">
-      </div>
+      <div class="control-row"><label>Blur</label><input type="range" id="ctrl-blur" min="0" max="40" value="15" oninput="update()"><span class="val" id="val-blur">15px</span></div>
+      <div class="control-row"><label>Opacity</label><input type="range" id="ctrl-opacity" min="0" max="1" step="0.01" value="0.15" oninput="update()"><span class="val" id="val-opacity">15%</span></div>
+      <div class="control-row"><label>Distort</label><input type="range" id="ctrl-distort" min="0" max="300" value="140" oninput="update()"><span class="val" id="val-distort">140</span></div>
+      <div class="control-row"><label>Noise</label><input type="range" id="ctrl-turb" min="0.001" max="0.05" step="0.001" value="0.015" oninput="update()"><span class="val" id="val-turb">0.015</span></div>
+      <div class="control-row"><label>Radius</label><input type="range" id="ctrl-radius" min="0" max="100" value="32" oninput="update()"><span class="val" id="val-radius">32px</span></div>
+      <div class="control-row"><label>Shine</label><input type="range" id="ctrl-shine" min="0" max="1" step="0.01" value="0.5" oninput="update()"><span class="val" id="val-shine">50%</span></div>
+      <div class="color-row"><label>Tint</label><input type="color" id="ctrl-color" value="#ffffff" oninput="update()"></div>
     </div>
 
     <div class="code-section">
-      <div>
-        <div class="code-title">CSS Logic</div>
-        <div class="code-box">
-          <button class="copy-btn" onclick="copyText('code-out')">Copy</button>
-          <pre id="code-out"></pre>
-        </div>
+      <div class="code-group">
+        <div class="code-title">CSS<button class="copy-btn" onclick="copyText('code-out')">Copy</button></div>
+        <div class="code-box"><pre id="code-out"></pre></div>
       </div>
       
-      <div>
-        <div class="code-title">HTML Structure (Edit content here)</div>
-        <div class="code-box">
-          <button class="copy-btn" onclick="copyText('html-out')">Copy</button>
-          <pre id="html-out"></pre>
-        </div>
+      <div class="code-group">
+        <div class="code-title">HTML<button class="copy-btn" onclick="copyText('html-out')">Copy</button></div>
+        <div class="code-box"><pre id="html-out"></pre></div>
+      </div>
+
+      <div class="code-group">
+        <div class="code-title">SVG Filter (Add to body) <button class="copy-btn" onclick="copyText('svg-out')">Copy</button></div>
+        <div class="code-box"><pre id="svg-out"></pre></div>
       </div>
     </div>
   </div>
 </main>
-  <script src="script.js"></script>
+
 <svg class="hidden">
   <filter id="glass-distortion">
     <feTurbulence id="fe-turb" type="fractalNoise" baseFrequency="0.015 0.015" numOctaves="2" seed="5" result="noise"/>
     <feGaussianBlur in="noise" stdDeviation="2" result="softNoise"/>
     <feDisplacementMap id="fe-disp" in="SourceGraphic" in2="softNoise" scale="140" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
+</svg>
+
+<script src="script.js"></script>
 </body>
 </html>
