@@ -1,6 +1,6 @@
 # HertzUI
 <img width="1280" height="720" alt="codesplay" src="https://github.com/user-attachments/assets/a104e138-2ffa-4cd8-8905-9ddd101a05d7" />
-[Demo](https://accessible-beige-ypweiqitsv.edgeone.app/)
+[label]([http://example.com](https://accessible-beige-ypweiqitsv.edgeone.app/))
 ### A simple and easy-to-use glassmorphism generation site.
 ###### Best efforts has been shown to replicate the UI of popular glass morphism design similar to that of apple's glassy UI. I have searched multiple sites for references and tried to bring the best glassy feel close to that of the apple, and fyi not even AIs can replicate this well, so I took bits of info from here and there and combined it all.
 ###### How to use:
