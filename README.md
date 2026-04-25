@@ -8,4 +8,4 @@
 2. Adjust the options to your preference.
 3. Copy the output to your codes. Make sure to add the svg filter somewhere inside the body for the effects to work.
 
-'NOTICE: The CSS can also be manually changed by you once you have pasted the codes to your file, since all the code is local and no import were required.'
+- NOTICE: The CSS can also be manually changed by you once you have pasted the codes to your file, since all the code is local and no import were required.
